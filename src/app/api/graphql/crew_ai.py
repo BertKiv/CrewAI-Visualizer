@@ -39,13 +39,6 @@ tool_dict = {
 
 def run_mission(mission):
     try:
-        # llm = ChatGoogleGenerativeAI(
-        #     model="gemini-pro",
-        #     verbose=True,
-        #     temperature=0.5,
-        #     google_api_key=os.getenv("GEMINI_API_KEY"),
-        # )
-
         llm_model = os.getenv("LLM_MODEL", "gemini-pro")
         llm = None
 
@@ -106,6 +99,7 @@ def run_mission(mission):
 
         result = crew.kickoff()
         return {"result": result}
+        
     except Exception as e:
         print(e)
         return {"error": True, "message": str(e)}
