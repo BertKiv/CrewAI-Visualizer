@@ -83,7 +83,7 @@ function NewAgentModal(props: {
                       color="blue"
                       className="text-white"
                       value={tempAgent?.role}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           role: event.target.value,
@@ -101,7 +101,7 @@ function NewAgentModal(props: {
                       color="blue"
                       className="text-white"
                       value={tempAgent?.goal}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           goal: event.target.value,
@@ -120,7 +120,7 @@ function NewAgentModal(props: {
                       className="text-white"
                       resize={true}
                       value={tempAgent?.backstory || ""}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           backstory: event.target.value,
@@ -153,7 +153,7 @@ function NewAgentModal(props: {
                       crossOrigin={undefined}
                       color="blue"
                       defaultChecked={tempAgent?.allowDelegation}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           allowDelegation: !!event.target.value,
@@ -169,7 +169,7 @@ function NewAgentModal(props: {
                       crossOrigin={undefined}
                       color="blue"
                       defaultChecked={tempAgent?.verbose}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           verbose: !!event.target.value,
@@ -185,7 +185,7 @@ function NewAgentModal(props: {
                       crossOrigin={undefined}
                       color="blue"
                       defaultChecked={tempAgent?.verbose}
-                      onChange={(event) => {
+                      onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                         setTempAgent((prevState) => ({
                           ...prevState!,
                           memory: !!event.target.value,

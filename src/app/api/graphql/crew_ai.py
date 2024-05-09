@@ -47,22 +47,24 @@ def run_mission(mission):
         # )
 
         llm_model = os.getenv("LLM_MODEL", "gemini-pro")
-          llm = None
-          if llm_model == "custom_model":
-              # Custom model implementatio
-              llm = ChatOpenAI(
-                  api_key=os.getenv("CUSTOM_API_KEY"),
-                  api_url=os.getenv("CUSTOM_API_URL"),
-                  verbose=True,
-                  temperature=0.5,
-              )
-          else:
-              llm = ChatGoogleGenerativeAI(
-                  model=llm_model,
-                  verbose=True,
-                  temperature=0.5,
-                  google_api_key=os.getenv("GEMINI_API_KEY"),
-              )       
+        llm = None
+
+        if llm_model != "gemini-pro":
+            # Custom model implementation
+            llm = ChatOpenAI(
+                api_key=os.getenv("CUSTOM_API_KEY"),
+                base_url=os.getenv("CUSTOM_API_URL"),
+                model=llm_model,
+                verbose=True,
+                temperature=0.5,
+            )
+        else:
+            llm = ChatGoogleGenerativeAI(
+                model=llm_model,
+                verbose=True,
+                temperature=0.5,
+                google_api_key=os.getenv("GEMINI_API_KEY"),
+            )       
 
         agents = [
             Agent(

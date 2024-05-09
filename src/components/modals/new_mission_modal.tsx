@@ -92,7 +92,7 @@ function NewMissionModal(props: {
                     color="blue"
                     className="text-white"
                     value={tempMission?.name}
-                    onChange={(event) => {
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                       setTempMission((prevState) => ({
                         ...prevState!,
                         name: event.target.value,
@@ -173,7 +173,7 @@ function NewMissionModal(props: {
                     crossOrigin={undefined}
                     color="blue"
                     defaultChecked={tempMission?.verbose}
-                    onChange={(event) => {
+                    onChange={(event: React.ChangeEvent<HTMLInputElement>)  => {
                       setTempMission((prevState) => ({
                         ...prevState!,
                         verbose: !!event.target.value,
