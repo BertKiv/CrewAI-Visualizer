@@ -83,7 +83,7 @@ const MissionTaskEditor: React.FC<MissionTaskEditorProps> = ({
               label="Task Name"
               color="green"
               value={newTaskName}
-              onChange={(e) => setNewTaskName(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setNewTaskName(e.target.value)}
               crossOrigin={undefined}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
@@ -95,7 +95,7 @@ const MissionTaskEditor: React.FC<MissionTaskEditorProps> = ({
               color="green"
               resize={true}
               value={newTaskDescription}
-              onChange={(e) => setNewTaskDescription(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewTaskDescription(e.target.value)}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
             />
@@ -106,7 +106,7 @@ const MissionTaskEditor: React.FC<MissionTaskEditorProps> = ({
               color="green"
               resize={true}
               value={newTaskExpectedOutput}
-              onChange={(e) => setNewTaskExpectedOutput(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewTaskExpectedOutput(e.target.value)}
               onPointerEnterCapture={undefined}
               onPointerLeaveCapture={undefined}
             />
