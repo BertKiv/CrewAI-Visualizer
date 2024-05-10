@@ -11,6 +11,7 @@ services:
       - db
     env_file:
       - .env
+    command: sleep infinity
 
   db:
     image: postgres:16
