@@ -2,7 +2,7 @@
 
 # Install npm packages
 echo "Installing npm packages..."
-npm i
+npm install
 
 # Create Python virtual environment
 echo "Creating Python virtual environment..."

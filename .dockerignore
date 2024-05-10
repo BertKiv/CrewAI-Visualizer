@@ -47,3 +47,4 @@ __pycache__/
 agents_images/
 
 .history
+package-lock.json
